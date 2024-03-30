@@ -6,19 +6,54 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
+
+@Reducer
+struct ContentViewStore {
+    @ObservableState
+    struct State: Equatable {
+        var counter = 0
+    }
+    
+    enum Action: Equatable {
+        case increaseCounter
+        case decreaseCounter
+    }
+    
+    var body: some Reducer<State, Action> {
+        Reduce { state, action in
+            switch action {
+            case .increaseCounter:
+                state.counter += 1
+                return .none
+            case .decreaseCounter:
+                state.counter -= 1
+                return .none
+            }
+        }
+    }
+}
 
 struct ContentView: View {
+    let store: StoreOf<ContentViewStore>
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(store.counter, format: .number)
+            
+            Button("Increase Counter") {
+                store.send(.increaseCounter)
+            }
+            
+            Button("Decrease Counter") {
+                store.send(.decreaseCounter)
+            }
+            
         }
         .padding()
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView(store: Store(initialState: ContentViewStore.State(), reducer: ()))
+//}
