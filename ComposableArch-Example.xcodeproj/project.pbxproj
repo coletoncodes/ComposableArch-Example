@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		9431F2D82BB87F94002070B2 /* ComposableArch_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431F2D72BB87F94002070B2 /* ComposableArch_ExampleApp.swift */; };
-		9431F2DA2BB87F94002070B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431F2D92BB87F94002070B2 /* ContentView.swift */; };
 		9431F2DC2BB87F97002070B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9431F2DB2BB87F97002070B2 /* Assets.xcassets */; };
 		9431F2DF2BB87F97002070B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9431F2DE2BB87F97002070B2 /* Preview Assets.xcassets */; };
+		946F25BB2BB8E79C00B1C8D1 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25BA2BB8E79C00B1C8D1 /* CounterFeature.swift */; };
 		94CC7FD02BB8814F0035A5BD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 94CC7FCF2BB8814F0035A5BD /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9431F2D42BB87F94002070B2 /* ComposableArch-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ComposableArch-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9431F2D72BB87F94002070B2 /* ComposableArch_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArch_ExampleApp.swift; sourceTree = "<group>"; };
-		9431F2D92BB87F94002070B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9431F2DB2BB87F97002070B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9431F2DE2BB87F97002070B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		946F25BA2BB8E79C00B1C8D1 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +54,9 @@
 			isa = PBXGroup;
 			children = (
 				9431F2D72BB87F94002070B2 /* ComposableArch_ExampleApp.swift */,
-				9431F2D92BB87F94002070B2 /* ContentView.swift */,
 				9431F2DB2BB87F97002070B2 /* Assets.xcassets */,
 				9431F2DD2BB87F97002070B2 /* Preview Content */,
+				946F25BA2BB8E79C00B1C8D1 /* CounterFeature.swift */,
 			);
 			path = "ComposableArch-Example";
 			sourceTree = "<group>";
@@ -145,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9431F2DA2BB87F94002070B2 /* ContentView.swift in Sources */,
+				946F25BB2BB8E79C00B1C8D1 /* CounterFeature.swift in Sources */,
 				9431F2D82BB87F94002070B2 /* ComposableArch_ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
