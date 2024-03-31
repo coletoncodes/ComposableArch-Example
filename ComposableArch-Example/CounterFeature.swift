@@ -11,18 +11,26 @@ import ComposableArchitecture
 @Reducer
 struct CounterFeature {
     @ObservableState
-    struct State {
+    struct State: Equatable {
         var count = 0
         var fact: String?
         var isLoading = false
+        var isTimerRunning = false
     }
+    
+    enum CancelID { case timer }
     
     enum Action {
         case decrementButtonTapped
         case factButtonTapped
         case incrementButtonTapped
         case factResponse(String)
+        case toggleTimerButtonTapped
+        case timerTick
     }
+    
+    @Dependency(\.continuousClock) var clock
+    @Dependency(\.numberFactClient) var numberFact
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -36,10 +44,11 @@ struct CounterFeature {
                 state.fact = nil
                 state.isLoading = true
                 return .run { [count = state.count] send in
-                    let (data, _) = try await URLSession.shared
-                        .data(from: URL(string: "http://numbersapi.com/\(count)")!)
-                    let fact = String(decoding: data, as: UTF8.self)
-                    await send(.factResponse(fact))
+                    do {
+                        try await send(.factResponse(numberFact.fetch(count)))
+                    } catch {
+                        print("Failed to receive a number fact with error: \(error)")
+                    }
                 }
                 
             case .incrementButtonTapped:
@@ -50,6 +59,24 @@ struct CounterFeature {
             case let .factResponse(fact):
                 state.fact = fact
                 state.isLoading = false
+                return .none
+                
+            case .toggleTimerButtonTapped:
+                state.isTimerRunning.toggle()
+                if state.isTimerRunning {
+                    return .run { send in
+                        for await _ in self.clock.timer(interval: .seconds(1)) {
+                            await send(.timerTick)
+                        }
+                    }
+                    .cancellable(id: CancelID.timer)
+                } else {
+                    return .cancel(id: CancelID.timer)
+                }
+                
+            case .timerTick:
+                state.count += 1
+                state.fact = nil
                 return .none
             }
         }
@@ -88,6 +115,14 @@ struct CounterView: View {
                     .background(Color.black.opacity(0.1))
                     .cornerRadius(10)
                 }
+                
+                Button(store.isTimerRunning ? "Stop timer" : "Start timer") {
+                    store.send(.toggleTimerButtonTapped)
+                }
+                .font(.largeTitle)
+                .padding()
+                .background(Color.black.opacity(0.1))
+                .cornerRadius(10)
                 
                 Button("Fact") {
                     store.send(.factButtonTapped)
