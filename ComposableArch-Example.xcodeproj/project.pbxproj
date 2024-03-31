@@ -17,6 +17,7 @@
 		946F25CF2BB909D900B1C8D1 /* AppFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25CE2BB909D900B1C8D1 /* AppFeatureTests.swift */; };
 		946F25D22BB9110800B1C8D1 /* ContactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25D12BB9110800B1C8D1 /* ContactsFeature.swift */; };
 		946F25D42BB9129900B1C8D1 /* AddContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25D32BB9129900B1C8D1 /* AddContactFeature.swift */; };
+		946F25D62BB91DCC00B1C8D1 /* ContactsFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25D52BB91DCC00B1C8D1 /* ContactsFeatureTests.swift */; };
 		94CC7FD02BB8814F0035A5BD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 94CC7FCF2BB8814F0035A5BD /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		946F25D02BB90BC200B1C8D1 /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTests.xctestplan; sourceTree = "<group>"; };
 		946F25D12BB9110800B1C8D1 /* ContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeature.swift; sourceTree = "<group>"; };
 		946F25D32BB9129900B1C8D1 /* AddContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFeature.swift; sourceTree = "<group>"; };
+		946F25D52BB91DCC00B1C8D1 /* ContactsFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeatureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			children = (
 				946F25C32BB8F6C600B1C8D1 /* CounterFeatureTests.swift */,
 				946F25CE2BB909D900B1C8D1 /* AppFeatureTests.swift */,
+				946F25D52BB91DCC00B1C8D1 /* ContactsFeatureTests.swift */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				946F25CF2BB909D900B1C8D1 /* AppFeatureTests.swift in Sources */,
+				946F25D62BB91DCC00B1C8D1 /* ContactsFeatureTests.swift in Sources */,
 				946F25C42BB8F6C600B1C8D1 /* CounterFeatureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

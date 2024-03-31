@@ -19,6 +19,14 @@ struct ContactsFeature {
         var contacts: IdentifiedArrayOf<Contact> = []
         @Presents var destination: Destination.State?
     }
+    enum Action {
+        case addButtonTapped
+        case deleteButtonTapped(id: Contact.ID)
+        case destination(PresentationAction<Destination.Action>)
+        enum Alert: Equatable {
+            case confirmDeletion(id: Contact.ID)
+        }
+    }
     
     @Reducer(state: .equatable)
     enum Destination {
@@ -26,14 +34,7 @@ struct ContactsFeature {
         case alert(AlertState<ContactsFeature.Action.Alert>)
     }
     
-    enum Action {
-        case addButtonTapped
-        case deleteButtonTapped(id: Contact.ID)
-        
-        enum Alert: Equatable {
-            case confirmDeletion(id: Contact.ID)
-        }
-    }
+    @Dependency(\.uuid) var uuid
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -41,7 +42,7 @@ struct ContactsFeature {
             case .addButtonTapped:
                 state.destination = .addContact(
                     AddContactFeature.State(
-                        contact: Contact(id: UUID(), name: "")
+                        contact: Contact(id: self.uuid(), name: "")
                     )
                 )
                 return .none
@@ -107,10 +108,14 @@ struct ContactsView: View {
                     }
                 }
             }
-            .alert($store.scope(state: \.alert, action: \.alert))
-            .sheet(item: $store.scope(state: \.addContact, action: \.addContact)) { addContactStore in
-                AddContactView(store: addContactStore)
+            .sheet(
+                item: $store.scope(state: \.destination?.addContact, action: \.destination.addContact)
+            ) { addContactStore in
+                NavigationStack {
+                    AddContactView(store: addContactStore)
+                }
             }
+            .alert($store.scope(state: \.destination?.alert, action: \.destination.alert))
         }
     }
 }
