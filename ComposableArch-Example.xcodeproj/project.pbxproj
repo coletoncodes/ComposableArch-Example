@@ -20,6 +20,7 @@
 		9431F2DB2BB87F97002070B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9431F2DE2BB87F97002070B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		946F25BA2BB8E79C00B1C8D1 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		946F25BC2BB8EEE500B1C8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		9431F2D62BB87F94002070B2 /* ComposableArch-Example */ = {
 			isa = PBXGroup;
 			children = (
+				946F25BC2BB8EEE500B1C8D1 /* Info.plist */,
 				9431F2D72BB87F94002070B2 /* ComposableArch_ExampleApp.swift */,
 				9431F2DB2BB87F97002070B2 /* Assets.xcassets */,
 				9431F2DD2BB87F97002070B2 /* Preview Content */,
@@ -283,6 +285,7 @@
 				DEVELOPMENT_TEAM = 435ZY68D35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ComposableArch-Example/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -315,6 +318,7 @@
 				DEVELOPMENT_TEAM = 435ZY68D35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ComposableArch-Example/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
