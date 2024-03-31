@@ -15,6 +15,7 @@
 		946F25CB2BB9051000B1C8D1 /* NumberFactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25CA2BB9051000B1C8D1 /* NumberFactClient.swift */; };
 		946F25CD2BB908C700B1C8D1 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25CC2BB908C700B1C8D1 /* AppView.swift */; };
 		946F25CF2BB909D900B1C8D1 /* AppFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25CE2BB909D900B1C8D1 /* AppFeatureTests.swift */; };
+		946F25D22BB9110800B1C8D1 /* ContactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25D12BB9110800B1C8D1 /* ContactsFeature.swift */; };
 		94CC7FD02BB8814F0035A5BD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 94CC7FCF2BB8814F0035A5BD /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 		946F25CA2BB9051000B1C8D1 /* NumberFactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactClient.swift; sourceTree = "<group>"; };
 		946F25CC2BB908C700B1C8D1 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		946F25CE2BB909D900B1C8D1 /* AppFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeatureTests.swift; sourceTree = "<group>"; };
+		946F25D02BB90BC200B1C8D1 /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTests.xctestplan; sourceTree = "<group>"; };
+		946F25D12BB9110800B1C8D1 /* ContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 		9431F2CB2BB87F94002070B2 = {
 			isa = PBXGroup;
 			children = (
+				946F25D02BB90BC200B1C8D1 /* UnitTests.xctestplan */,
 				9431F2D62BB87F94002070B2 /* ComposableArch-Example */,
 				946F25C22BB8F6C600B1C8D1 /* UnitTests */,
 				9431F2D52BB87F94002070B2 /* Products */,
@@ -89,6 +93,7 @@
 				946F25BA2BB8E79C00B1C8D1 /* CounterFeature.swift */,
 				946F25CA2BB9051000B1C8D1 /* NumberFactClient.swift */,
 				946F25CC2BB908C700B1C8D1 /* AppView.swift */,
+				946F25D12BB9110800B1C8D1 /* ContactsFeature.swift */,
 			);
 			path = "ComposableArch-Example";
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				946F25CB2BB9051000B1C8D1 /* NumberFactClient.swift in Sources */,
 				946F25BB2BB8E79C00B1C8D1 /* CounterFeature.swift in Sources */,
 				9431F2D82BB87F94002070B2 /* ComposableArch_ExampleApp.swift in Sources */,
+				946F25D22BB9110800B1C8D1 /* ContactsFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "1EC44CFF-520B-46FB-9B9D-98448D5766EA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ComposableArch-Example.xcodeproj",
+      "identifier" : "9431F2D32BB87F94002070B2",
+      "name" : "ComposableArch-Example"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ComposableArch-Example.xcodeproj",
+        "identifier" : "946F25C02BB8F6C600B1C8D1",
+        "name" : "UnitTests"
+      }
+    }
+  ],
+  "version" : 1
+}
