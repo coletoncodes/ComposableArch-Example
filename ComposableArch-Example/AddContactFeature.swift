@@ -37,7 +37,10 @@ struct AddContactFeature {
                 return .none
                 
             case .saveButtonTapped:
-                return .send(.delegate(.saveContact(state.contact)))
+                return .run { [contact = state.contact] send in
+                    await send(.delegate(.saveContact(contact)))
+                    await self.dismiss()
+                }
                 
             case let .setName(name):
                 state.contact.name = name
@@ -53,8 +56,10 @@ struct AddContactView: View {
     @Perception.Bindable var store: StoreOf<AddContactFeature>
     
     var body: some View {
-        Form {
-            TextField("Name", text: $store.contact.name.sending(\.setName))
+        VStack {
+            Form {
+                TextField("Name", text: $store.contact.name.sending(\.setName))
+            }
         }
         .safeAreaInset(edge: .bottom) {
             Button("Save") {
