@@ -12,12 +12,12 @@ struct AppFeature {
     
     struct State: Equatable {
         var tab1 = CounterFeature.State()
-        var tab2 = CounterFeature.State()
+        var tab2 = ContactsFeature.State()
     }
     
     enum Action {
         case tab1(CounterFeature.Action)
-        case tab2(CounterFeature.Action)
+        case tab2(ContactsFeature.Action)
     }
     
     var body: some ReducerOf<Self> {
@@ -27,7 +27,7 @@ struct AppFeature {
         }
         
         Scope(state: \.tab2, action: \.tab2) {
-            CounterFeature()
+            ContactsFeature()
         }
         
         Reduce { state, action in
@@ -37,6 +37,7 @@ struct AppFeature {
 }
 
 import SwiftUI
+
 struct AppView: View {
     let store: StoreOf<AppFeature>
     
@@ -44,13 +45,15 @@ struct AppView: View {
         TabView {
             CounterView(store: store.scope(state: \.tab1, action: \.tab1))
                 .tabItem {
-                    Text("Counter 1")
+                    Text("Counter")
                 }
             
-            CounterView(store: store.scope(state: \.tab2, action: \.tab2))
-                .tabItem {
-                    Text("Counter 2")
-                }
+            ContactsView(
+                store: store.scope(state: \.tab2, action: \.tab2)
+            )
+            .tabItem {
+                Text("Contacts")
+            }
         }
     }
 }

@@ -10,6 +10,7 @@
 		9431F2D82BB87F94002070B2 /* ComposableArch_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431F2D72BB87F94002070B2 /* ComposableArch_ExampleApp.swift */; };
 		9431F2DC2BB87F97002070B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9431F2DB2BB87F97002070B2 /* Assets.xcassets */; };
 		9431F2DF2BB87F97002070B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9431F2DE2BB87F97002070B2 /* Preview Assets.xcassets */; };
+		9460DFD92BB9B87C006F7858 /* ContactDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460DFD82BB9B87C006F7858 /* ContactDetailFeature.swift */; };
 		946F25BB2BB8E79C00B1C8D1 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25BA2BB8E79C00B1C8D1 /* CounterFeature.swift */; };
 		946F25C42BB8F6C600B1C8D1 /* CounterFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25C32BB8F6C600B1C8D1 /* CounterFeatureTests.swift */; };
 		946F25CB2BB9051000B1C8D1 /* NumberFactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F25CA2BB9051000B1C8D1 /* NumberFactClient.swift */; };
@@ -36,6 +37,7 @@
 		9431F2D72BB87F94002070B2 /* ComposableArch_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArch_ExampleApp.swift; sourceTree = "<group>"; };
 		9431F2DB2BB87F97002070B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9431F2DE2BB87F97002070B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9460DFD82BB9B87C006F7858 /* ContactDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFeature.swift; sourceTree = "<group>"; };
 		946F25BA2BB8E79C00B1C8D1 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		946F25BC2BB8EEE500B1C8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		946F25C12BB8F6C600B1C8D1 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 				946F25CC2BB908C700B1C8D1 /* AppView.swift */,
 				946F25D12BB9110800B1C8D1 /* ContactsFeature.swift */,
 				946F25D32BB9129900B1C8D1 /* AddContactFeature.swift */,
+				9460DFD82BB9B87C006F7858 /* ContactDetailFeature.swift */,
 			);
 			path = "ComposableArch-Example";
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				946F25D42BB9129900B1C8D1 /* AddContactFeature.swift in Sources */,
 				946F25CB2BB9051000B1C8D1 /* NumberFactClient.swift in Sources */,
 				946F25BB2BB8E79C00B1C8D1 /* CounterFeature.swift in Sources */,
+				9460DFD92BB9B87C006F7858 /* ContactDetailFeature.swift in Sources */,
 				9431F2D82BB87F94002070B2 /* ComposableArch_ExampleApp.swift in Sources */,
 				946F25D22BB9110800B1C8D1 /* ContactsFeature.swift in Sources */,
 			);

@@ -18,18 +18,14 @@ final class AppFeatureTests: XCTestCase {
         
         store = TestStore(initialState: AppFeature.State()) {
             AppFeature()
+        } withDependencies: {
+            $0.uuid = .incrementing
         }
     }
     
-    func testIncrementInFirstTab() async {
+    func testCounterFeature() async {
         await store.send(\.tab1.incrementButtonTapped) {
             $0.tab1.count = 1
-        }
-    }
-    
-    func testIncrementInSecondTab() async {
-        await store.send(\.tab2.incrementButtonTapped) {
-            $0.tab2.count = 1
         }
     }
 }
