@@ -49,6 +49,7 @@
 		946F25D12BB9110800B1C8D1 /* ContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeature.swift; sourceTree = "<group>"; };
 		946F25D32BB9129900B1C8D1 /* AddContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFeature.swift; sourceTree = "<group>"; };
 		946F25D52BB91DCC00B1C8D1 /* ContactsFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeatureTests.swift; sourceTree = "<group>"; };
+		94A7F5312BBA5AC90024C590 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 		9431F2CB2BB87F94002070B2 = {
 			isa = PBXGroup;
 			children = (
+				94A7F5312BBA5AC90024C590 /* README.md */,
 				946F25D02BB90BC200B1C8D1 /* UnitTests.xctestplan */,
 				9431F2D62BB87F94002070B2 /* ComposableArch-Example */,
 				946F25C22BB8F6C600B1C8D1 /* UnitTests */,
