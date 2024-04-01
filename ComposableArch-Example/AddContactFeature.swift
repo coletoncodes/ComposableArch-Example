@@ -59,20 +59,22 @@ struct AddContactView: View {
     @Perception.Bindable var store: StoreOf<AddContactFeature>
     
     var body: some View {
-        VStack {
-            Form {
-                TextField("Name", text: $store.contact.name.sending(\.setName))
+        WithPerceptionTracking {
+            VStack {
+                Form {
+                    TextField("Name", text: $store.contact.name.sending(\.setName))
+                }
             }
-        }
-        .safeAreaInset(edge: .bottom) {
-            Button("Save") {
-                store.send(.saveButtonTapped)
+            .safeAreaInset(edge: .bottom) {
+                Button("Save") {
+                    store.send(.saveButtonTapped)
+                }
             }
-        }
-        .toolbar {
-            ToolbarItem {
-                Button("Cancel") {
-                    store.send(.cancelButtonTapped)
+            .toolbar {
+                ToolbarItem {
+                    Button("Cancel") {
+                        store.send(.cancelButtonTapped)
+                    }
                 }
             }
         }

@@ -12,7 +12,6 @@ import SwiftUI
 struct ComposableArch_ExampleApp: App {
     static let store = Store(initialState: AppFeature.State()) {
         AppFeature()
-            ._printChanges()
     }
     
     var body: some Scene {

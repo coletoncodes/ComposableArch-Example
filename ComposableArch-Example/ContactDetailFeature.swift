@@ -68,13 +68,15 @@ struct ContactDetailView: View {
     @Perception.Bindable var store: StoreOf<ContactDetailFeature>
     
     var body: some View {
-        Form {
-            Button("Delete") {
-                store.send(.deleteButtonTapped)
+        WithPerceptionTracking {
+            Form {
+                Button("Delete") {
+                    store.send(.deleteButtonTapped)
+                }
             }
+            .navigationBarTitle(Text(store.contact.name))
+            .alert($store.scope(state: \.alert, action: \.alert))
         }
-        .navigationBarTitle(Text(store.contact.name))
-        .alert($store.scope(state: \.alert, action: \.alert))
     }
 }
 
